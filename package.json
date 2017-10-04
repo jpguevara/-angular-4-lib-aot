@@ -2,6 +2,7 @@
   "name": "@ws/angular-lib",
   "version": "0.0.1",
   "license": "ISC",
+  "main": "src/index.ts",
   "angular-cli": {},
   "scripts": {
     "ngc": "ngc",
@@ -9,8 +10,9 @@
     "gulp": "gulp",
     "rimraf": "rimraf",
     "build": "npm run build:aot",
-    "build:aot": "rimraf .aot/ .dist/ release/ && npm run inline-resources && ngc -p tsconfig-aot.json && rimraf .aot/node_modules",
+    "build:aot": "rimraf .aot/ .dist/ release/ && npm run inline-resources && ngc -p tsconfig-aot.json && rimraf .aot/node_modules && npm run prepare-dist",
     "build:angular": "ngc -p tsconfig-aot.json",
+    "prepare-dist": "node prepare-dist.js",
     "build:webpack": "npm run build:aot && webpack",
     "clean": "rimraf .aot/ .dist/ release/ node_modules/",
     "inline-resources": "gulp --gulpfile ./config/gulpfile.js --cwd ./",
