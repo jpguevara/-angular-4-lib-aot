@@ -3,7 +3,6 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ModuleAComponent } from './module-a.component';
