@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ModuleAModule } from './index';
 
 @NgModule({
   declarations: [
 
   ],
   imports: [
-    BrowserModule
+    ModuleAModule
   ],
   providers: [],
-  bootstrap: []
+  bootstrap: [ModuleAModule]
 })
 export class LibTestHarnessModule { }
