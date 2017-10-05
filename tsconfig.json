@@ -8,11 +8,9 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
-      "es5",
       "es6",
       "es2015",
-      "dom",
-      "es2016.array.include"
+      "dom"
     ],
     "typeRoots": [
       "./node_modules/@types"
@@ -21,10 +19,6 @@
   "files": [
     "./.aot/src/index.ts",
     "./.aot/src/module-a/mi/mi.module.ts"
-  ],
-  "types": [
-    "node",
-    "jasmine"
   ],
   "angularCompilerOptions": {
     "skipTemplateCodegen": false,

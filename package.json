@@ -11,12 +11,12 @@
     "rimraf": "rimraf",
     "build:with-test": "npm run test && npm run build",
     "build": "npm run build:aot",
-    "build:aot": "rimraf .aot/ .dist/ release/ && npm run inline-resources && ngc -p tsconfig-aot.json && rimraf .aot/node_modules && npm run prepare-dist",
-    "build:angular": "ngc -p tsconfig-aot.json",
-    "prepare-dist": "node prepare-dist.js",
+    "build:aot": "rimraf .aot/ .dist/ release/ && npm run inline-resources && ngc -p tsconfig.json && rimraf .aot/node_modules && npm run prepare-dist",
+    "build:angular": "ngc -p tsconfig.json",
+    "prepare-dist": "node ./.config/scripts/build/prepare-dist.js",
     "build:webpack": "npm run build:aot && webpack",
     "clean": "rimraf .aot/ .dist/ release/ node_modules/",
-    "inline-resources": "gulp --gulpfile ./config/gulpfile.js --cwd ./",
+    "inline-resources": "gulp --gulpfile ./.config/gulpfile.js --cwd ./",
     "karma": "karma",
     "test": "karma start --single-run"
   },
@@ -49,9 +49,7 @@
     "rimraf": "^2.6.2",
     "rxjs": "^5.4.3",
     "typescript": "^2.5.3",
-    "zone.js": "^0.8.18"
-  },
-  "devDependencies": {
+    "zone.js": "^0.8.18",
     "@angular/cli": "^1.2.7",
     "@types/core-js": "^0.9.43",
     "jasmine-core": "^2.8.0",
