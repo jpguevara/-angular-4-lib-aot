@@ -1,10 +1,13 @@
 {
-  "extends": "tsconfig.json",
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/spec",
     "baseUrl": "./",
     "module": "commonjs",
     "target": "es5",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
     "types": [
       "jasmine",
       "node"
@@ -20,5 +23,8 @@
   "include": [
     "**/*.spec.ts",
     "**/*.d.ts"
+  ],
+  "typeRoots": [
+    "../node_modules/@types"
   ]
 }

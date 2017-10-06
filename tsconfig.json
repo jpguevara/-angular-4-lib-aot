@@ -7,6 +7,8 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "lib": [
       "es6",
       "es2015",
@@ -17,8 +19,7 @@
     ]
   },
   "files": [
-    "./.aot/src/index.ts",
-    "./.aot/src/module-a/mi/mi.module.ts"
+    "./.aot/src/index.ts"
   ],
   "angularCompilerOptions": {
     "skipTemplateCodegen": false,

@@ -1,1 +1,2 @@
-export { ModuleAModule } from './module-a/module-a.module';
+export { LibraryModule } from './library/library.module';
+export { LibraryComponent } from './library/library.component';

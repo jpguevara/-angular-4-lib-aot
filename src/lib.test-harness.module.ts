@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ModuleAModule } from './index';
+import { LibraryComponent, LibraryModule } from './index';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
 
   ],
   imports: [
-    ModuleAModule
+    LibraryModule,
+    RouterModule.forRoot([{ path: '', component: LibraryComponent }])
   ],
   providers: [],
-  bootstrap: [ModuleAModule]
+  bootstrap: [LibraryComponent]
 })
 export class LibTestHarnessModule { }
