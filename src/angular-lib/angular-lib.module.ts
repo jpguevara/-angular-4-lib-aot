@@ -6,11 +6,9 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { LibraryComponent } from './library.component';
+import { AngularLibComponent } from './angular-lib.component';
 import { GlobalLayoutComponent } from './global-layout/global-layout.component';
-import * as components from './components'
-// import { routes } from './library.routes';
-
+import * as components from './components';
 
 @NgModule({
   imports: [
@@ -24,21 +22,21 @@ import * as components from './components'
   declarations: [
     components.FatalErrorPageComponent,
     GlobalLayoutComponent,
-    LibraryComponent
+    AngularLibComponent
   ],
   exports: [
-    // ...Object.keys(components).map(key => components[key]) // does not work with aot
-    LibraryComponent,
+    // ...Object.keys(components).map(key => components[key]) // doesn't work with aot
+    AngularLibComponent,
     components.FatalErrorPageComponent,
     GlobalLayoutComponent
   ],
   providers: [],
   bootstrap: [GlobalLayoutComponent]
 })
-export class LibraryModule {
+export class AngularLibModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: LibraryModule, providers: [
+      ngModule: AngularLibModule, providers: [
 
       ]
     };
