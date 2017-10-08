@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LibraryComponent, LibraryModule } from './index';
+import { AngularLibComponent, AngularLibModule } from './index';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -8,10 +8,10 @@ import { RouterModule } from '@angular/router';
 
   ],
   imports: [
-    LibraryModule,
-    RouterModule.forRoot([{ path: '', component: LibraryComponent }])
+    AngularLibModule,
+    RouterModule.forRoot([{ path: '', component: AngularLibComponent }])
   ],
   providers: [],
-  bootstrap: [LibraryComponent]
+  bootstrap: [AngularLibComponent]
 })
 export class LibTestHarnessModule { }

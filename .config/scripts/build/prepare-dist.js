@@ -38,7 +38,6 @@ if (fs.existsSync(options.distPath)) {
 
 function renameAndSave() {
   fs.renameSync(options.aotPath, options.distPath);
-  fs.mkdirSync
   fs.writeFileSync(path.join(options.distPath, '/package.json'), JSON.stringify(packageJson, null, 4));
   console.log('Done.');
 }
