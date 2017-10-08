@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AngularLibComponent } from './angular-lib.component';
 import * as components from './components';
@@ -15,8 +14,7 @@ import * as components from './components';
     FormsModule,
     BrowserModule,
     CommonModule,
-    RouterModule.forChild([]),
-    NgbModule.forRoot(),
+    RouterModule.forChild([])
   ],
   declarations: [
     components.FatalErrorPageComponent,
