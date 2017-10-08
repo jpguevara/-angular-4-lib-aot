@@ -28,7 +28,6 @@ function modifyPackageJson(newPackage) {
 }
 
 function folderNameFromPackageName(packageName) {
-  // const projectName = '@new-1/new-library-project.1';
   const folderName = packageName.replace(/@[A-Za-z0-9\-\.]*\//, '').replace('.', '-');
   return folderName;
 }
@@ -36,14 +35,13 @@ function folderNameFromPackageName(packageName) {
 function installDependencies() {
   console.log('Installing dependencies...');
   var spawn = require('child_process').spawnSync,
-    // ls = spawn('ls', ['-lh', '/usr']),
     yarnInstall = spawn('yarn', ['install']);
-
   if (yarnInstall.stderr && yarnInstall.stderr.length > 0) {
     console.log(`stderr: ${yarnInstall.stderr.toString()}`);
-
   }
-  console.log(`${yarnInstall.stdout.toString()}`);
+  if (yarnInstall.stdout && yarnInstall.stdout.length > 0) {
+    console.log(`stdout: ${yarnInstall.stdout.toString()}`);
+  }
 }
 
 header('Library Setup');
