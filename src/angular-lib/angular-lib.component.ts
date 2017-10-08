@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: 'angular-lib.component.html',
   styleUrls: ['angular-lib.component.scss'],
 })
-export class AngularLibComponent {
-
-}
+export class AngularLibComponent { }

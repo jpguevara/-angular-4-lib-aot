@@ -7,7 +7,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AngularLibComponent } from './angular-lib.component';
-import { GlobalLayoutComponent } from './global-layout/global-layout.component';
 import * as components from './components';
 
 @NgModule({
@@ -21,17 +20,17 @@ import * as components from './components';
   ],
   declarations: [
     components.FatalErrorPageComponent,
-    GlobalLayoutComponent,
+    components.GlobalLayoutComponent,
     AngularLibComponent
   ],
   exports: [
     // ...Object.keys(components).map(key => components[key]) // doesn't work with aot
     AngularLibComponent,
     components.FatalErrorPageComponent,
-    GlobalLayoutComponent
+    components.GlobalLayoutComponent
   ],
   providers: [],
-  bootstrap: [GlobalLayoutComponent]
+  bootstrap: [components.GlobalLayoutComponent]
 })
 export class AngularLibModule {
   static forRoot(): ModuleWithProviders {

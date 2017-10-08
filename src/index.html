@@ -8,9 +8,45 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- get the required files from 3rd party sources -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    strong.code {
+      background-color: whitesmoke;
+      padding: 5px;
+      font-size: 20px;
+    }
+  </style>
 </head>
 
 <body>
+  <h1>Angular Library Test Harness</h1>
+  <p>This is a runing sample of the library.</p>
+  <p>Here are some quick facts about it:</p>
+  <ul>
+    <li>This is an angular library project.</li>
+    <li>The goal of this project is to be consumed by another angular application.</li>
+    <li>This page will not be included into the final bundle.</li>
+    <li>This project compiles into a set of *.js and *.d.ts files.</li>
+
+  </ul>
+
+  <p>To execute the unti test for the project run this command.
+    <strong class="code">npm run test</strong>
+  </p>
+  <p>The files to distribute and publish are located in:
+    <strong class="code">dist/</strong>
+    after the build command.
+  </p>
+  <p>The Entry component for the test harness is the
+    <strong class="code">AngularLibComponent</strong>
+  </p>
   <library></library>
 </body>
 

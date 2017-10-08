@@ -14,10 +14,4 @@ $background-color: rgb(255, 255, 255);
   background-color: $background-color;
 }
 
-/deep/ {
-  * {
-    font-size: 13px;
-    text-align: left;
-  }
-}
 
