@@ -35,7 +35,7 @@ function renameAngularComponentStyle(basePath, oldComponentName, newComponentNam
       `${basePath}/${oldComponentName}.component.ts`
     ],
     from: [
-      new RegExp(`${oldComponentName}.component.scss`, 'g')
+      new RegExp(`${oldComponentName}\.component.scss`, 'g')
     ],
     to: [
       `${newComponentName}.component.scss`
@@ -60,19 +60,20 @@ function renameAngularComponent(basePath, componentPath, oldComponentFilename, n
   const oldComponentName = `${oldPascalName}Component`;
   const newComponentName = `${newPascalName}Component`;
 
-  // replace the component name in the code
+  const oldImportPathRegex = `\\/${oldComponentFilename}\\.component`;
+  const newImportPath = `/${newComponentFilename}.component`;
+
   const options = {
     files: [
-      // `${basePath}/**/${oldComponentFilename}.component.ts`
       `${basePath}/**/*.ts`
     ],
     from: [
-      new RegExp(`${oldComponentName}`, 'g'), // renames the component name in the code
-      new RegExp(`/${oldComponentFilename}.component`, 'g') // renames the component name in the imports paths
+      new RegExp(oldComponentName, 'g'), // renames the component name in the code
+      new RegExp(oldImportPathRegex, 'g') // renames the component name in the imports paths
     ],
     to: [
-      `${newComponentName}`,
-      `/${newComponentFilename}.component`
+      newComponentName,
+      newImportPath
     ]
   };
 
@@ -97,7 +98,7 @@ function renameAngularModule(basePath, modulePath, oldModuleFilename, newModuleF
     ],
     from: [
       new RegExp(`${oldModuleName}`, 'g'), // renames the module name in the code
-      new RegExp(`/${oldModuleFilename}.module`, 'g') // renames the module name in the imports paths
+      new RegExp(`\/${oldModuleFilename}\.module`, 'g') // renames the module name in the imports paths
     ],
     to: [
       `${newModuleName}`,
@@ -117,7 +118,7 @@ function renameDirectory(basePath, oldDirectoryName, newDirectoryName) {
       `${basePath}/**/*.ts`
     ],
     from: [
-      new RegExp(`/${oldDirectoryName}/`, 'g'), // renames the directory name in the code import paths
+      new RegExp(`\/${oldDirectoryName}\/`, 'g'), // renames the directory name in the code import paths
     ],
     to: [
       `/${newDirectoryName}/`
